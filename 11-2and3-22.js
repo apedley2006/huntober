@@ -8,3 +8,8 @@ last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 
 last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what']
 last('take me to semynak'), ['take', 'me', 'semynak', 'to']  */
 
+function sortLastChar(x) {
+    x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
+}
+
+console.log(sortLastChar("man i need a taxi up to ubud"), '["a", "need", "ubud", "i", "taxi", "man", "to", "up"]')
