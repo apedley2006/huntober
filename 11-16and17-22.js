@@ -8,3 +8,9 @@ A few examples:
 If the average length is not an integer, use Math.round().
 The input array's length > 1 */
 
+function avgLengthRepeater (arr) {
+    const avgLength = Math.round(arr.join('').length / arr.length)
+
+    return arr.map( str => str[0].repeat(avgLength))
+}
+
